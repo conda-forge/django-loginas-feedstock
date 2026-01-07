@@ -1,13 +1,13 @@
 {% set name = "django-loginas" %}
-{% set version = "0.3.11" %}
+{% set version = "0.3.14" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/django-loginas-{{ version }}.tar.gz
-  sha256: 37aec6fcd1cdb72378b69d2468d2ae39b12cd013f838a9bf9b9b5132e8341735
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 080bb6b714cee854739cc7242f2faf9e23f098691bd42ef3fd62e9bc9c5492ad
 
 build:
   noarch: python
