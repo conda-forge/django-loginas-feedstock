@@ -19,18 +19,19 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python ${{ python_min }}.*
     - pip
+    - setuptools
   run:
-    - python >=3.6
+    - python >=${{ python_min }}
 
 tests:
   - python:
       imports:
         - loginas
       pip_check: true
-
       python_version: ${{ python_min }}.*
+
 about:
   summary: An app to add a "Log in as user" button in the Django user admin page.
   license: BSD-3-Clause
